@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="module" src="js/index.mjs"></script>
+    <meta charset="utf-8" />
+    <title>The Web Gallery</title>
+    <link href="style/form.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <a href="https://inakiva.github.io/" id="title" class="web_title"
+        >Image Gallery</a
+      >
+    </header>
+    <button id="toggle_form" class="button" type="button">Add an Image</button>
+    <form id="new_image_form" class="add_image" style="display: none">
+      <header>New Image</header>
+      <input
+        id="new_image_title"
+        type="text"
+        class="input"
+        placeholder="Image Title"
+      />
+      <input
+        id="new_image_author"
+        type="text"
+        class="input"
+        placeholder="Author's Name"
+      />
+      <input
+        id="new_image_url"
+        type="text"
+        class="input"
+        placeholder="Image URL"
+      />
+      <button class="button" id="post" type="submit">POST</button>
+    </form>
+    <div class="image_container">
+      <div id="current_image"></div>
+      <form class="comment_section">
+        <header>Comment Section</header>
+        <div class="content_row">
+          <button id="previous_comments" class="previous"></button>
+          <button id="next_comments" class="next"></button>
+        </div>
+        <div id="comments"></div>
+      </form>
+      <form id="comment_form" class="comment_form">
+        <header>Add Comment</header>
+        <input id="c_author" class="input" type="text" placeholder="Author" />
+        <textarea
+          id="c_para"
+          class="long_text"
+          placeholder="Comment"
+        ></textarea>
+        <button class="button">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>
